@@ -22,9 +22,7 @@ The programm calls the function `gets`.
 
 `
 char *gets(char *s)
-gets() reads a line from stdin into the buffer pointed to by s until either a terminating newline or EOF, which it replaces with a null byte (aq\0aq). No check for buffer overrun is performed (see BUGS below).` </br>
-`[...]`</br>
-`Bugs`</br>
+gets() reads a line from stdin into the buffer pointed to by s until either a terminating newline or EOF, which it replaces with a null byte (aq\0aq)` </br>
 `Never use gets(). Because it is impossible to tell without knowing the data in advance how many characters gets() will read, and because gets() will continue to store characters past the end of the buffer, it is extremely dangerous to use. It has been used to break computer security.
 `</br>
 https://linux.die.net/man/3/gets
