@@ -1,4 +1,4 @@
-```bash
+```
 level1@RainFall:~$ ./level1
 Yes what is hapenning?
 level1@RainFall:~$
@@ -20,18 +20,18 @@ End of assembler dump.
 
 The programm calls the function `gets`.
 
-``` 
+`
 char *gets(char *s)
-gets() reads a line from stdin into the buffer pointed to by s until either a terminating newline or EOF, which it replaces with a null byte (aq\0aq). No check for buffer overrun is performed (see BUGS below). 
-[...]
-Bugs
-Never use gets(). Because it is impossible to tell without knowing the data in advance how many characters gets() will read, and because gets() will continue to store characters past the end of the buffer, it is extremely dangerous to use. It has been used to break computer security.
-```
+gets() reads a line from stdin into the buffer pointed to by s until either a terminating newline or EOF, which it replaces with a null byte (aq\0aq). No check for buffer overrun is performed (see BUGS below).` </br>
+`[...]`</br>
+`Bugs`</br>
+`Never use gets(). Because it is impossible to tell without knowing the data in advance how many characters gets() will read, and because gets() will continue to store characters past the end of the buffer, it is extremely dangerous to use. It has been used to break computer security.
+`</br>
 https://linux.die.net/man/3/gets
 
-```
+`
 The basic problem is that the function doesn't know how big the buffer is, so it continues reading until it finds a newline or encounters EOF, and may overflow the bounds of the buffer it was given.
-```
+`</br>
 https://stackoverflow.com/questions/1694036/why-is-the-gets-function-so-dangerous-that-it-should-not-be-used
 
 Let's do some documentation on buffer overflows and find how to perform a `buffer overflow attack`.
